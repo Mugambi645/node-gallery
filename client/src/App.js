@@ -1,9 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from "react";
-import images from "./api-mock.json";
+import { useEffect, useState } from "react";
+
+import { getImages } from './api';
 function App() {
-  const [imageList, setImageList] = useState(images.resources)
+  const [imageList, setImageList] = useState([]);
+  useEffect(() => {
+    const fetchData = async() => {
+      const resJson = await getImages();
+      setImageList(resJson.resources);
+    }
+    fetchData();
+  }, []);
   return (
     <div className="image-grid">
     {imageList.map((image) => (
