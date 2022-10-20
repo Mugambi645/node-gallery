@@ -14,6 +14,9 @@ const auth = {
     password: config.API_SECRET
 }
 app.get("/photos", async(req,res) =>{
-    return res.send({message: "Hello"})
+    const response = await axios.get(BASE_URL, {
+        auth,
+    })
+    return res.send(response.data)
 })
 app.listen(PORT, () => console.log(`Server listening at port ${PORT}`))
