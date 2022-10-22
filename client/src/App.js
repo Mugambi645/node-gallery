@@ -58,7 +58,7 @@ function App() {
   
     <div className="image-grid">
     {imageList.map((image) => (
-      <img src={image.url} alt={image.publid_id}></img>
+      <img className="rounded-md" src={image.url} alt={image.publid_id}></img>
     ))}
     </div>
     <div className='footer'>
