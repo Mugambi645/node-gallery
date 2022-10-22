@@ -38,7 +38,8 @@ function App() {
   }
   return (
     <>
-    <form onSubmit={handleFormSubmit}>
+    
+    <form onSubmit={handleFormSubmit} className='p-6'>
     <div class="flex items-center justify-center ">
     <div class="flex border-2 border-gray-200 rounded">
         <input type="text" 
@@ -49,7 +50,7 @@ function App() {
             Search
         </button>
         </div>
-        <button onClick={resetForm} class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button onClick={resetForm} class="bg-red-500 hover:bg-purple-900 text-white font-bold py-2 px-4 rounded">
   Clear
 </button>
 
@@ -58,13 +59,20 @@ function App() {
   
     <div className="image-grid">
     {imageList.map((image) => (
+      <div className='container space-x-3'>
       <img className="rounded-md" src={image.url} alt={image.publid_id}></img>
+      </div>
     ))}
     </div>
     <div className='footer'>
       {
         nextCursor && (
-          <button onClick={handleLoadMore}>Load more</button>
+
+<div class="container py-10 px-10 mx-0 min-w-full flex flex-col items-center">
+
+  <button class="bg-purple-900 text-white hover:bg-blue-400 font-bold py-2 px-4 mt-3 rounded" onClick={handleLoadMore}>Load More</button>
+</div>
+
         )
       }
 
