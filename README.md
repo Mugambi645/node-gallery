@@ -28,13 +28,10 @@ cd server
 npm install
 # create .env file & add cloudinary API variables
 touch .env & inside 
-```
 API_KEY=#########
-
 CLOUD_NAME=#######
-
 API_SECRET=###############
-```
+
 # serve
 nodemon index.js
 
