@@ -26,11 +26,14 @@ npm run build --report
 cd server
 # install dependancies
 npm install
-# create .env file & add [cloudinary](https://cloudinary.com/) api variables
+# create .env file & add
+[cloudinary](https://cloudinary.com/) api variables
 touch .env & inside 
 ```
 API_KEY=#########
+
 CLOUD_NAME=#######
+
 API_SECRET=###############
 ```
 # serve
