@@ -33,11 +33,11 @@ touch .env & inside
 API_KEY=#########
 CLOUD_NAME=#######
 API_SECRET=###############
-
 # serve
 nodemon index.js
-
+# testing the API with postman
 ```
+![Postman](./postman.png)
 ## 📝 License
 
 This project is free to use
