@@ -1,8 +1,10 @@
 # Node image uploader
 
 > 
-> Built with react,express and cloudinary api
+> Built with react,express and cloudinary API
 
+![SnapShot](./pic.png)
+![SnapShot](./pic1.png)
 ## Build Setup:frontend
 
 ``` bash
