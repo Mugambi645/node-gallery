@@ -39,13 +39,23 @@ function App() {
   return (
     <>
     <form onSubmit={handleFormSubmit}>
-      <input
-      value={searchValue}
-      onChange={(event) => setSearchValue(event.target.value)}
-      required="required" placeholder='Enter a search value..'></input>
-      <button type='submit'>Search</button>
-      <button type='button' onClick={resetForm}>Clear</button>
-    </form>
+    <div class="flex items-center justify-center ">
+    <div class="flex border-2 border-gray-200 rounded">
+        <input type="text" 
+        value={searchValue}
+        onChange={(event) => setSearchValue(event.target.value)}
+        class="px-4 py-2 w-80" placeholder="Search... " required='required'></input>
+        <button class="px-4 text-white bg-gray-600 border-l ">
+            Search
+        </button>
+        </div>
+        <button onClick={resetForm} class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+  Clear
+</button>
+
+</div>
+</form>
+  
     <div className="image-grid">
     {imageList.map((image) => (
       <img src={image.url} alt={image.publid_id}></img>
